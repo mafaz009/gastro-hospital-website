@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import type { ReactNode } from "react";
 import { useState } from "react";
 import { hospital } from "../data/site";
@@ -101,7 +102,7 @@ function DesktopMegaMenu({
     <div className="group relative">
       <button
         type="button"
-        className="flex items-center gap-1 py-2 text-sm font-semibold text-slate-700 transition hover:text-blue-800"
+        className="flex items-center gap-1 py-2 text-sm font-semibold text-blue-950 transition hover:text-blue-800"
       >
         {label}
         <span className="text-xs">▾</span>
@@ -115,18 +116,40 @@ function DesktopMegaMenu({
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === "/";
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 shadow-sm backdrop-blur">
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 md:px-6">
-        <Link href="/" className="shrink-0 text-lg font-bold text-blue-700">
-          Myra City Hospital
+    <header
+      className={`z-50 ${
+        isHome
+          ? "absolute inset-x-0 top-0 bg-transparent"
+          : "sticky top-0 border-b border-slate-200 bg-white/95 shadow-sm backdrop-blur"
+      }`}
+    >
+      <div className="mx-auto flex max-w-[1480px] items-center justify-between gap-4 px-4 py-5 md:px-8 lg:px-12">
+        <Link
+          href="/"
+          className="flex shrink-0 items-center gap-3 text-blue-950"
+          aria-label="Myra City Hospital home"
+        >
+          <span className="grid h-11 w-11 place-items-center rounded-full border-2 border-blue-800 bg-white text-lg font-black text-blue-800 shadow-sm">
+            M
+          </span>
+          <span className="leading-none">
+            <span className="block text-xl font-black tracking-tight text-blue-900">
+              MYRA CITY
+            </span>
+            <span className="block text-xl font-black tracking-tight text-blue-900">
+              HOSPITAL
+            </span>
+          </span>
         </Link>
 
-        <nav className="hidden items-center gap-5 lg:flex">
+        <nav className="hidden items-center gap-7 lg:flex">
           <Link
             href="/"
-            className="py-2 text-sm font-semibold text-slate-700 transition hover:text-blue-800"
+            className="py-2 text-sm font-semibold text-blue-950 transition hover:text-blue-800"
           >
             Home
           </Link>
@@ -153,40 +176,46 @@ export default function Header() {
             </div>
           </DesktopMegaMenu>
 
-          <DesktopMegaMenu label="Services">
-            <div className="grid gap-4 md:grid-cols-3">
-              {serviceLinks.map((link) => (
-                <MegaLink key={link.label} {...link} />
-              ))}
-            </div>
-          </DesktopMegaMenu>
+          <Link
+            href="/#doctors"
+            className="py-2 text-sm font-semibold text-blue-950 transition hover:text-blue-800"
+          >
+            Our Specialists
+          </Link>
 
-          <DesktopMegaMenu label="Treatments">
-            <div className="grid gap-5 md:grid-cols-3">
-              {treatmentColumns.map((column) => (
-                <div key={column.title}>
-                  <p className="mb-2 px-3 text-xs font-semibold uppercase tracking-wide text-blue-800">
-                    {column.title}
-                  </p>
-                  <div className="grid gap-1">
-                    {column.links.map((link) => (
-                      <MegaLink key={link.href} {...link} />
-                    ))}
+          <DesktopMegaMenu label="Services">
+            <div className="grid gap-6">
+              <div className="grid gap-4 md:grid-cols-3">
+                {serviceLinks.map((link) => (
+                  <MegaLink key={link.label} {...link} />
+                ))}
+              </div>
+              <div className="grid gap-5 border-t border-slate-200 pt-4 md:grid-cols-3">
+                {treatmentColumns.map((column) => (
+                  <div key={column.title}>
+                    <p className="mb-2 px-3 text-xs font-semibold uppercase tracking-wide text-blue-800">
+                      {column.title}
+                    </p>
+                    <div className="grid gap-1">
+                      {column.links.map((link) => (
+                        <MegaLink key={link.href} {...link} />
+                      ))}
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </DesktopMegaMenu>
 
           <Link
             href="/blogs"
-            className="py-2 text-sm font-semibold text-slate-700 transition hover:text-blue-800"
+            className="py-2 text-sm font-semibold text-blue-950 transition hover:text-blue-800"
           >
-            Blogs
+            Patient Guide
           </Link>
           <Link
             href="/#appointment"
-            className="py-2 text-sm font-semibold text-slate-700 transition hover:text-blue-800"
+            className="py-2 text-sm font-semibold text-blue-950 transition hover:text-blue-800"
           >
             Contact
           </Link>
@@ -194,8 +223,24 @@ export default function Header() {
 
         <div className="flex items-center gap-3">
           <Link
+            href={hospital.phoneHref}
+            className="hidden items-center gap-2 rounded-full bg-white/70 px-4 py-2 text-sm font-semibold text-blue-950 shadow-sm ring-1 ring-blue-100 backdrop-blur transition hover:bg-white xl:flex"
+          >
+            <svg
+              aria-hidden="true"
+              className="h-4 w-4"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 3.1 5.18 2 2 0 0 1 5.11 3h3a2 2 0 0 1 2 1.72c.12.9.33 1.77.62 2.6a2 2 0 0 1-.45 2.11L9 10.71a16 16 0 0 0 4.29 4.29l1.27-1.27a2 2 0 0 1 2.11-.45c.83.29 1.7.5 2.6.62A2 2 0 0 1 22 16.92Z" />
+            </svg>
+            {hospital.phone}
+          </Link>
+          <Link
             href="/book-appointment"
-            className="hidden rounded-md bg-blue-700 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-950 md:block"
+            className="hidden rounded-lg bg-blue-950 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-950/20 transition hover:bg-blue-800 md:block"
           >
             Book Appointment
           </Link>

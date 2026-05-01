@@ -5,16 +5,17 @@ import ReviewSlider from "./components/ReviewSlider";
 import { hospital, siteUrl } from "./data/site";
 
 const heroHighlights = [
-  "Expert specialists",
-  "Advanced endoscopy and surgical care",
-  "24/7 critical care support",
+  "Advanced Endoscopy",
+  "Expert Gastro Team",
+  "World-Class Infrastructure",
+  "Patient First Approach",
 ];
 
 const trustStats = [
-  { value: "10,000+", label: "Successful treatments" },
-  { value: "High", label: "GI surgery success focus" },
-  { value: "24/7", label: "Modern ICU and emergency care" },
-  { value: "Lucknow", label: "Trusted by local patients" },
+  { value: "10,000+", label: "Happy Patients" },
+  { value: "15+", label: "Years of Experience" },
+  { value: "5000+", label: "Endoscopic Procedures" },
+  { value: "100%", label: "Patient Safety" },
 ];
 
 const coreStrengths = [
@@ -505,86 +506,244 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
 
-      <section className="relative overflow-hidden border-b border-slate-200 bg-[#eaf2f8]">
-        <div className="absolute inset-0 bg-[linear-gradient(115deg,rgba(246,249,252,0.98)_0%,rgba(234,242,248,0.96)_52%,rgba(214,229,239,0.74)_100%)]" />
-        <div className="relative mx-auto grid min-h-[720px] max-w-7xl items-center gap-12 px-4 py-14 md:grid-cols-[0.95fr_1.05fr] md:px-6 lg:py-16">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-wide text-blue-800">
-              Advanced Gastro, Liver and Critical Care Excellence in Lucknow
-            </p>
-            <h1 className="mt-5 max-w-4xl text-4xl font-bold leading-tight text-slate-950 md:text-6xl">
-              Myra City Hospital - Best Gastro Hospital in Lucknow
-            </h1>
-            <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-700">
-              At Myra City Hospital, we deliver world-class gastroenterology, GI
-              surgery, liver care, and critical care services in Lucknow with
-              precision, compassion, and clinical excellence.
-            </p>
-            <p className="mt-4 max-w-3xl text-base leading-7 text-slate-600">
-              Our mission is simple: accurate diagnosis, effective treatment, and
-              long-term patient wellness.
-            </p>
-            <div className="mt-7 grid gap-3 sm:grid-cols-3">
-              {heroHighlights.map((item) => (
-                <div
-                  key={item}
-                  className="rounded-md border border-blue-100 bg-white/80 px-4 py-3 text-sm font-semibold text-slate-800"
+      <section className="relative overflow-hidden bg-[#f4f9fd]">
+        <div className="absolute inset-0 bg-[linear-gradient(105deg,#f8fbff_0%,#f2f8fd_38%,#e4f0f8_68%,#f8fbff_100%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_76%_12%,rgba(255,255,255,0.98)_0,rgba(255,255,255,0.78)_12%,rgba(255,255,255,0)_30%),radial-gradient(circle_at_84%_48%,rgba(184,213,231,0.42)_0,rgba(255,255,255,0)_32%)]" />
+        <div className="absolute left-0 top-0 h-full w-[46%] bg-[linear-gradient(90deg,rgba(255,255,255,0.78),rgba(255,255,255,0))]" />
+        <div className="absolute right-[9%] top-20 hidden h-72 w-72 rounded-full border-[18px] border-white/70 shadow-[0_0_90px_rgba(30,64,175,0.12)] lg:block" />
+
+        <div className="relative mx-auto max-w-[1480px] px-4 pb-6 pt-20 md:px-8 lg:px-12 lg:pb-7 lg:pt-20">
+          <div className="grid min-h-[560px] items-center gap-6 lg:grid-cols-[0.86fr_1.14fr]">
+            <div className="relative z-10 pb-0 lg:-mt-8 lg:pb-8">
+              <div className="inline-flex items-center gap-3 rounded-full bg-white/80 px-4 py-2 text-xs font-extrabold uppercase tracking-wide text-blue-900 shadow-sm ring-1 ring-blue-100 backdrop-blur md:text-sm">
+                <span className="grid h-8 w-8 place-items-center rounded-full bg-blue-50 text-blue-800">
+                  <svg
+                    aria-hidden="true"
+                    className="h-5 w-5"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" />
+                    <path d="m9 12 2 2 4-5" />
+                  </svg>
+                </span>
+                Lucknow&apos;s Most Trusted
+              </div>
+
+              <h1 className="mt-6 max-w-3xl text-5xl font-black leading-[1.06] tracking-normal text-blue-950 md:text-6xl xl:text-7xl">
+                Advanced Gastro Care.
+              </h1>
+              <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-700">
+                Comprehensive care for digestive, liver, and pancreatic
+                disorders with advanced technology and expert
+                gastroenterologists at Myra City Hospital, Lucknow.
+              </p>
+
+              <div className="mt-5 flex flex-col gap-3 sm:flex-row">
+                <Link
+                  href="/book-appointment"
+                  className="inline-flex items-center justify-center gap-2 rounded-lg bg-blue-900 px-5 py-3 text-sm font-semibold text-white shadow-xl shadow-blue-950/20 transition hover:bg-blue-800"
                 >
-                  {item}
-                </div>
-              ))}
-            </div>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Link
-                href="/book-appointment"
-                className="rounded-md bg-blue-800 px-6 py-3 text-center text-sm font-semibold text-white shadow-sm transition hover:bg-blue-950"
-              >
-                Book Your Consultation Today
-              </Link>
-              <Link
-                href="/gastro-medicine"
-                className="rounded-md border border-slate-300 bg-white/80 px-6 py-3 text-center text-sm font-semibold text-slate-900 transition hover:border-blue-300"
-              >
-                Explore Gastro Services
-              </Link>
-            </div>
-          </div>
+                  <svg
+                    aria-hidden="true"
+                    className="h-4 w-4"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
+                    <path d="M8 2v4" />
+                    <path d="M16 2v4" />
+                    <rect width="18" height="18" x="3" y="4" rx="2" />
+                    <path d="M3 10h18" />
+                  </svg>
+                  Book Appointment
+                </Link>
+                <Link
+                  href={hospital.phoneHref}
+                  className="inline-flex items-center justify-center gap-2 rounded-lg border border-blue-700 bg-white/75 px-5 py-3 text-sm font-semibold text-blue-900 shadow-sm backdrop-blur transition hover:bg-white"
+                >
+                  <svg
+                    aria-hidden="true"
+                    className="h-4 w-4"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 3.1 5.18 2 2 0 0 1 5.11 3h3a2 2 0 0 1 2 1.72c.12.9.33 1.77.62 2.6a2 2 0 0 1-.45 2.11L9 10.71a16 16 0 0 0 4.29 4.29l1.27-1.27a2 2 0 0 1 2.11-.45c.83.29 1.7.5 2.6.62A2 2 0 0 1 22 16.92Z" />
+                  </svg>
+                  Call Now
+                </Link>
+              </div>
 
-          <div className="relative md:pl-4">
-            <div className="overflow-hidden rounded-2xl border border-white/80 bg-white p-2 shadow-2xl shadow-slate-300/70">
+              <div className="mt-6 grid max-w-2xl grid-cols-2 gap-4 text-sm font-medium text-blue-950 sm:grid-cols-4">
+                {heroHighlights.map((item) => (
+                  <div key={item} className="flex items-center gap-2.5">
+                    <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-white/75 text-blue-800 shadow-sm ring-1 ring-blue-100">
+                      <svg
+                        aria-hidden="true"
+                        className="h-4 w-4"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                      >
+                        <path d="M12 2v20" />
+                        <path d="M2 12h20" />
+                        <path d="m5 5 14 14" />
+                        <path d="m19 5-14 14" />
+                      </svg>
+                    </span>
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="relative min-h-[500px] lg:min-h-[600px]">
+              <div className="absolute inset-x-[-7%] bottom-10 top-0 overflow-hidden rounded-[2.2rem] border border-white/80 bg-white/55 shadow-[0_35px_95px_rgba(15,40,84,0.14)] lg:inset-x-0 lg:bottom-14">
+                <Image
+                  src="/images/premium-hospital-hero-backdrop.png"
+                  alt=""
+                  aria-hidden="true"
+                  width={1535}
+                  height={1024}
+                  priority
+                  sizes="(min-width: 1280px) 760px, (min-width: 1024px) 56vw, 100vw"
+                  className="h-full w-full scale-105 object-cover object-[70%_48%]"
+                />
+                <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(244,249,253,0.82)_0%,rgba(255,255,255,0.38)_32%,rgba(255,255,255,0.04)_68%,rgba(244,249,253,0.26)_100%)]" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_76%_13%,rgba(255,255,255,0.62)_0,rgba(255,255,255,0)_22%)]" />
+                <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#f4f9fd] via-[#f4f9fd]/78 to-transparent" />
+              </div>
+              <div className="absolute bottom-9 left-[48%] h-20 w-[44%] -translate-x-1/2 rounded-[50%] bg-blue-950/12 blur-2xl lg:bottom-11" />
               <Image
-                src="/images/best-gastro-doctor-lucknow-juned-khan.png"
-                alt="Dr. Juned Ahmad Khan, gastroenterologist at Myra City Hospital Lucknow"
-                width={1191}
-                height={1321}
+                src="/images/dr-juned-khan-gastro-lucknow-up.webp"
+                alt="Dr. Juned Ahmad Khan, gastroenterologist and liver specialist at Myra City Hospital Lucknow"
+                width={1600}
+                height={1850}
                 priority
-                sizes="(min-width: 1024px) 560px, (min-width: 768px) 48vw, 100vw"
-                className="h-[390px] w-full rounded-xl object-cover object-[50%_18%] sm:h-[460px] lg:h-[535px]"
+                sizes="(min-width: 1280px) 720px, (min-width: 1024px) 54vw, 100vw"
+                className="absolute bottom-0 left-1/2 h-[520px] w-auto max-w-none -translate-x-1/2 object-contain object-bottom drop-shadow-[0_30px_48px_rgba(15,23,42,0.18)] sm:h-[580px] lg:left-[46%] lg:h-[650px]"
               />
+
+              <div className="absolute right-0 top-[72%] z-10 w-[min(88vw,380px)] -translate-y-1/2 rounded-2xl border border-white/80 bg-white/90 px-6 py-4 text-left shadow-2xl shadow-blue-950/18 ring-1 ring-blue-100 backdrop-blur lg:right-0">
+                <p className="text-base font-extrabold leading-tight text-blue-950">
+                  Dr. Juned Ahmad Khan
+                </p>
+                <div className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1">
+                  <p className="text-xs font-semibold text-blue-700">
+                    MD, DM, ILBS-New Delhi
+                  </p>
+                  <span className="hidden h-1 w-1 rounded-full bg-blue-300 sm:block" />
+                  <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+                    Gastro &amp; Liver Specialist
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className="absolute -bottom-6 left-8 right-8 rounded-xl border border-slate-200 bg-white/95 p-5 shadow-xl backdrop-blur">
-              <p className="text-sm font-semibold uppercase tracking-wide text-blue-800">
-                Dr. Juned Ahmad Khan
+          </div>
+
+          <div className="relative z-20 -mt-14 overflow-hidden rounded-3xl bg-blue-950 shadow-2xl shadow-blue-950/25 lg:-mt-20">
+            <div className="grid lg:grid-cols-[1.2fr_4fr]">
+              <div className="relative min-h-[155px] overflow-hidden bg-[radial-gradient(circle_at_40%_45%,rgba(96,165,250,0.62),rgba(37,99,235,0.45)_32%,rgba(12,31,68,0.98)_74%)] p-6 text-white">
+                <div className="absolute -left-10 bottom-0 h-44 w-44 rounded-full border border-white/20" />
+                <div className="absolute left-12 top-12 h-20 w-20 rounded-full bg-blue-400/35 blur-xl" />
+                <p className="relative text-sm font-semibold">Specialized in</p>
+                <p className="relative mt-2 max-w-64 text-xl font-bold leading-tight">
+                  Gastro, Liver &amp; Pancreatic Care
+                </p>
+                <p className="relative mt-3 max-w-64 text-sm leading-6 text-blue-100">
+                  Advanced diagnosis. Accurate treatment. Better outcomes.
+                </p>
+              </div>
+              <div className="grid divide-y divide-white/20 text-white sm:grid-cols-2 sm:divide-x sm:divide-y-0 lg:grid-cols-4">
+                {trustStats.map((stat) => (
+                  <div key={stat.label} className="px-7 py-7 text-center">
+                    <div className="mx-auto mb-4 grid h-10 w-10 place-items-center rounded-full border border-white/35 text-white">
+                      <svg
+                        aria-hidden="true"
+                        className="h-5 w-5"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                      >
+                        <path d="m12 2 3.09 6.26L22 9.27l-5 4.88L18.18 22 12 18.56 5.82 22 7 14.15l-5-4.88 6.91-1.01L12 2Z" />
+                      </svg>
+                    </div>
+                    <p className="text-3xl font-black">{stat.value}</p>
+                    <p className="mt-2 text-base text-blue-100">{stat.label}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="grid gap-5 px-2 py-5 text-blue-950 md:grid-cols-2 lg:grid-cols-4">
+            <div className="flex items-start gap-4">
+              <svg
+                aria-hidden="true"
+                className="mt-1 h-6 w-6 shrink-0"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
+                <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              <p className="text-sm leading-6">{hospital.address}</p>
+            </div>
+            <div className="flex items-start gap-4">
+              <svg
+                aria-hidden="true"
+                className="mt-1 h-6 w-6 shrink-0"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 3.1 5.18 2 2 0 0 1 5.11 3h3a2 2 0 0 1 2 1.72c.12.9.33 1.77.62 2.6a2 2 0 0 1-.45 2.11L9 10.71a16 16 0 0 0 4.29 4.29l1.27-1.27a2 2 0 0 1 2.11-.45c.83.29 1.7.5 2.6.62A2 2 0 0 1 22 16.92Z" />
+              </svg>
+              <p className="text-sm leading-6">
+                <Link href={hospital.phoneHref}>{hospital.phone}</Link>
               </p>
-              <p className="mt-2 text-sm leading-6 text-slate-600">
-                Gastro, liver, pancreas and advanced endoscopy care at Myra City
-                Hospital, Lucknow.
+            </div>
+            <div className="flex items-start gap-4">
+              <svg
+                aria-hidden="true"
+                className="mt-1 h-6 w-6 shrink-0"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
+                <circle cx="12" cy="12" r="9" />
+                <path d="M12 7v5l3 2" />
+              </svg>
+              <p className="text-sm leading-6">{hospital.openingHours}</p>
+            </div>
+            <div className="flex items-start gap-4">
+              <svg
+                aria-hidden="true"
+                className="mt-1 h-6 w-6 shrink-0"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" />
+                <path d="m9 12 2 2 4-5" />
+              </svg>
+              <p className="text-sm leading-6">
+                Cashless facility and emergency support available
               </p>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section className="border-b border-slate-200 bg-white">
-        <div className="mx-auto grid max-w-7xl gap-px px-4 py-9 md:grid-cols-4 md:px-6">
-          {trustStats.map((stat) => (
-            <div key={stat.label} className="text-center md:border-r md:last:border-r-0">
-              <p className="text-3xl font-bold text-blue-800">{stat.value}</p>
-              <p className="mt-2 text-xs font-semibold uppercase tracking-wide text-slate-600">
-                {stat.label}
-              </p>
-            </div>
-          ))}
         </div>
       </section>
 
