@@ -5,17 +5,16 @@ import ReviewSlider from "./components/ReviewSlider";
 import { hospital, siteUrl } from "./data/site";
 
 const heroHighlights = [
-  "Advanced Endoscopy",
-  "Expert Gastro Team",
-  "World-Class Infrastructure",
-  "Patient First Approach",
+  "Expert specialists",
+  "Advanced endoscopy and surgical care",
+  "24/7 critical care support",
 ];
 
 const trustStats = [
-  { value: "10,000+", label: "Patients Treated" },
-  { value: "15+", label: "Years of Experience" },
-  { value: "5000+", label: "Endoscopic Procedures" },
-  { value: "100%", label: "Patient Safety" },
+  { value: "10,000+", label: "Successful treatments" },
+  { value: "High", label: "GI surgery success focus" },
+  { value: "24/7", label: "Modern ICU and emergency care" },
+  { value: "Lucknow", label: "Trusted by local patients" },
 ];
 
 const coreStrengths = [
@@ -506,113 +505,86 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
 
-      <section className="relative overflow-hidden border-b border-slate-200 bg-[#edf5fb]">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_74%_18%,rgba(255,255,255,0.95)_0%,rgba(226,238,247,0.82)_34%,rgba(237,245,251,0.95)_68%)]" />
-        <div className="absolute inset-x-0 bottom-0 h-44 bg-white/70" />
-        <div className="relative mx-auto max-w-7xl px-4 pb-8 pt-8 md:px-6 lg:pb-10">
-          <div className="grid gap-10 pt-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-end lg:pt-16">
-            <div className="pb-0 lg:pb-28">
-              <p className="inline-flex items-center rounded-full bg-white/80 px-4 py-2 text-sm font-bold uppercase tracking-wide text-blue-800 shadow-sm">
-                Lucknow&apos;s Most Trusted Gastro Hospital
-              </p>
-              <h1 className="mt-7 max-w-3xl text-5xl font-black leading-tight tracking-tight text-blue-950 md:text-6xl lg:text-7xl">
-                Advanced Gastro Care. Trusted Expertise.
-              </h1>
-              <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-700">
-                Myra City Hospital provides comprehensive care for digestive,
-                liver, and pancreatic disorders in Lucknow with advanced
-                technology, expert gastroenterologists, GI surgery, and 24/7
-                critical care support.
-              </p>
-
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <Link
-                  href="/book-appointment"
-                  className="rounded-md bg-blue-800 px-6 py-4 text-center text-sm font-semibold text-white shadow-sm transition hover:bg-blue-950"
+      <section className="relative overflow-hidden border-b border-slate-200 bg-[#eaf2f8]">
+        <div className="absolute inset-0 bg-[linear-gradient(115deg,rgba(246,249,252,0.98)_0%,rgba(234,242,248,0.96)_52%,rgba(214,229,239,0.74)_100%)]" />
+        <div className="relative mx-auto grid min-h-[720px] max-w-7xl items-center gap-12 px-4 py-14 md:grid-cols-[0.95fr_1.05fr] md:px-6 lg:py-16">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-wide text-blue-800">
+              Advanced Gastro, Liver and Critical Care Excellence in Lucknow
+            </p>
+            <h1 className="mt-5 max-w-4xl text-4xl font-bold leading-tight text-slate-950 md:text-6xl">
+              Myra City Hospital - Best Gastro Hospital in Lucknow
+            </h1>
+            <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-700">
+              At Myra City Hospital, we deliver world-class gastroenterology, GI
+              surgery, liver care, and critical care services in Lucknow with
+              precision, compassion, and clinical excellence.
+            </p>
+            <p className="mt-4 max-w-3xl text-base leading-7 text-slate-600">
+              Our mission is simple: accurate diagnosis, effective treatment, and
+              long-term patient wellness.
+            </p>
+            <div className="mt-7 grid gap-3 sm:grid-cols-3">
+              {heroHighlights.map((item) => (
+                <div
+                  key={item}
+                  className="rounded-md border border-blue-100 bg-white/80 px-4 py-3 text-sm font-semibold text-slate-800"
                 >
-                  Book Appointment
-                </Link>
-                <a
-                  href={hospital.phoneHref}
-                  className="rounded-md border border-blue-200 bg-white/80 px-6 py-4 text-center text-sm font-semibold text-blue-950 transition hover:border-blue-400"
-                >
-                  Call Now
-                </a>
-              </div>
-
-              <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-                {heroHighlights.map((item) => (
-                  <div key={item} className="flex items-center gap-3">
-                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-blue-100 bg-white text-sm font-black text-blue-800">
-                      +
-                    </span>
-                    <span className="text-sm font-semibold leading-5 text-slate-700">
-                      {item}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="relative min-h-[520px] lg:min-h-[650px]">
-              <Image
-                src="/images/best-gastro-doctor-lucknow-juned-khan.png"
-                alt="Dr. Juned Ahmad Khan, gastroenterologist at Myra City Hospital Lucknow"
-                fill
-                priority
-                sizes="(min-width: 1024px) 640px, 100vw"
-                className="object-contain object-bottom"
-              />
-              <div className="absolute bottom-8 right-0 w-full max-w-sm rounded-2xl bg-white/95 shadow-2xl shadow-slate-400/40 backdrop-blur lg:bottom-24">
-                <div className="p-6 text-center">
-                  <p className="text-lg font-bold text-blue-950">
-                    Dr. Juned Ahmad Khan
-                  </p>
-                  <p className="mt-1 text-sm font-semibold text-red-600">
-                    MD, DM, ILBS-New Delhi
-                  </p>
-                  <div className="mx-auto mt-5 h-px w-14 bg-blue-200" />
-                  <div className="mt-5 grid gap-4 text-left text-sm font-semibold text-slate-700">
-                    <p>15+ Years Experience</p>
-                    <p>10,000+ Patients Treated</p>
-                    <p>Gastro and Liver Specialist</p>
-                  </div>
-                </div>
-                <Link
-                  href="/book-appointment"
-                  className="block rounded-b-2xl bg-blue-950 px-6 py-5 text-center text-sm font-bold text-white"
-                >
-                  Meet Our Doctor
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          <div className="relative z-10 -mt-2 overflow-hidden rounded-2xl bg-blue-950 shadow-2xl shadow-blue-950/25 lg:-mt-20">
-            <div className="grid gap-px bg-white/15 md:grid-cols-[1.15fr_repeat(4,1fr)]">
-              <div className="bg-blue-950 p-6 text-white md:p-8">
-                <p className="text-sm font-semibold text-blue-100">Specialized in</p>
-                <h2 className="mt-2 text-2xl font-bold leading-tight">
-                  Gastro, Liver and Pancreatic Care
-                </h2>
-                <p className="mt-3 text-sm leading-6 text-blue-100">
-                  Advanced diagnosis. Accurate treatment. Better outcomes.
-                </p>
-              </div>
-              {trustStats.map((stat) => (
-                <div key={stat.label} className="bg-blue-950 p-6 text-center text-white md:p-8">
-                  <p className="text-4xl font-black">{stat.value}</p>
-                  <p className="mt-2 text-sm font-medium text-blue-100">{stat.label}</p>
+                  {item}
                 </div>
               ))}
             </div>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <Link
+                href="/book-appointment"
+                className="rounded-md bg-blue-800 px-6 py-3 text-center text-sm font-semibold text-white shadow-sm transition hover:bg-blue-950"
+              >
+                Book Your Consultation Today
+              </Link>
+              <Link
+                href="/gastro-medicine"
+                className="rounded-md border border-slate-300 bg-white/80 px-6 py-3 text-center text-sm font-semibold text-slate-900 transition hover:border-blue-300"
+              >
+                Explore Gastro Services
+              </Link>
+            </div>
           </div>
 
-          <div className="grid gap-4 px-2 py-7 text-sm font-semibold leading-6 text-blue-950 md:grid-cols-3 lg:grid-cols-[1.3fr_0.85fr_0.85fr]">
-            <p>{hospital.address}</p>
-            <p>{hospital.phone}</p>
-            <p>{hospital.openingHours} | Cashless facility available</p>
+          <div className="relative md:pl-4">
+            <div className="overflow-hidden rounded-2xl border border-white/80 bg-white p-2 shadow-2xl shadow-slate-300/70">
+              <Image
+                src="/images/best-gastro-doctor-lucknow-juned-khan.png"
+                alt="Dr. Juned Ahmad Khan, gastroenterologist at Myra City Hospital Lucknow"
+                width={1191}
+                height={1321}
+                priority
+                sizes="(min-width: 1024px) 560px, (min-width: 768px) 48vw, 100vw"
+                className="h-[390px] w-full rounded-xl object-cover object-[50%_18%] sm:h-[460px] lg:h-[535px]"
+              />
+            </div>
+            <div className="absolute -bottom-6 left-8 right-8 rounded-xl border border-slate-200 bg-white/95 p-5 shadow-xl backdrop-blur">
+              <p className="text-sm font-semibold uppercase tracking-wide text-blue-800">
+                Dr. Juned Ahmad Khan
+              </p>
+              <p className="mt-2 text-sm leading-6 text-slate-600">
+                Gastro, liver, pancreas and advanced endoscopy care at Myra City
+                Hospital, Lucknow.
+              </p>
+            </div>
           </div>
+        </div>
+      </section>
+
+      <section className="border-b border-slate-200 bg-white">
+        <div className="mx-auto grid max-w-7xl gap-px px-4 py-9 md:grid-cols-4 md:px-6">
+          {trustStats.map((stat) => (
+            <div key={stat.label} className="text-center md:border-r md:last:border-r-0">
+              <p className="text-3xl font-bold text-blue-800">{stat.value}</p>
+              <p className="mt-2 text-xs font-semibold uppercase tracking-wide text-slate-600">
+                {stat.label}
+              </p>
+            </div>
+          ))}
         </div>
       </section>
 
