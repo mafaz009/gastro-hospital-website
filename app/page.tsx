@@ -46,7 +46,7 @@ const doctors = [
     qualification: "MCh Surgical Gastroenterology",
     description:
       "Senior surgical specialist for complex gastrointestinal, hepatobiliary, liver, pancreatic and minimally invasive procedures.",
-    image: "/images/dr-a-k-bansal-gastro-surgeon-lucknow.webp",
+    image: "/images/dr-a-k-bansal-gastro-surgeon-lucknow-portrait.webp",
     imageAlt:
       "Dr. A K Bansal, gastro surgeon and HPB specialist in Lucknow",
     badges: ["GI Surgery", "HPB Surgery", "Laparoscopic Surgery"],
