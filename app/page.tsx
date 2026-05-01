@@ -27,23 +27,44 @@ const coreStrengths = [
 const doctors = [
   {
     name: "Dr. Juned Ahmad Khan",
-    role: "Gastro Medicine Specialist",
+    role: "Gastro Medicine, Liver, Pancreas and Endoscopy Specialist",
+    qualification: "MD, DM, FLBS-New Delhi",
     description:
-      "Expert in advanced gastroenterology, liver diseases, and endoscopic procedures.",
+      "Expert in advanced gastroenterology, hepatology, pancreatic disorders and therapeutic endoscopic procedures.",
+    image: "/images/best-gastro-doctor-lucknow-juned-khan.png",
+    imageAlt:
+      "Dr. Juned Ahmad Khan, gastroenterologist and liver specialist at Myra City Hospital Lucknow",
+    badges: ["Gastroenterology", "Hepatology", "Advanced Endoscopy"],
+    expertise: ["ERCP, EUS and colonoscopy", "Fatty liver, GERD and pancreatitis", "GI bleeding and complex digestive diagnosis"],
+    stats: ["Advanced endoscopy", "Liver specialist"],
+    cta: "Book with Dr. Juned Ahmad Khan",
     initials: "JK",
   },
   {
     name: "Dr. A K Bansal",
-    role: "GI and Liver Transplant Surgeon",
+    role: "GI, GI Oncology, HPB and Liver Transplant Surgeon",
+    qualification: "MCh Surgical Gastroenterology",
     description:
-      "Highly experienced in complex gastrointestinal and hepatobiliary surgeries.",
+      "Senior surgical specialist for complex gastrointestinal, hepatobiliary, liver, pancreatic and minimally invasive procedures.",
+    image: "/images/dr-a-k-bansal-gastro-surgeon-lucknow.webp",
+    imageAlt:
+      "Dr. A K Bansal, gastro surgeon and HPB specialist in Lucknow",
+    badges: ["GI Surgery", "HPB Surgery", "Laparoscopic Surgery"],
+    expertise: ["Gallbladder, hernia and colorectal surgery", "GI oncology and cancer surgery", "Liver, pancreas and bile duct surgery"],
+    stats: ["15+ years", "5000+ surgeries"],
+    cta: "Book with Dr. A K Bansal",
     initials: "AB",
   },
   {
     name: "Dr. Amir",
     role: "Critical Care Specialist",
+    qualification: "Critical Care and ICU Medicine",
     description:
-      "Specialist in intensive care medicine and life-saving emergency interventions.",
+      "Specialist in intensive care medicine, emergency stabilization and life-saving organ support for critically ill patients.",
+    badges: ["Critical Care", "ICU", "Emergency Support"],
+    expertise: ["Severe abdominal emergencies", "Ventilator and organ support", "Post-surgical ICU monitoring"],
+    stats: ["24/7 ICU", "Emergency care"],
+    cta: "Book critical care consultation",
     initials: "DA",
   },
 ];
@@ -617,23 +638,85 @@ export default function Home() {
 
           <div className="mt-10 grid gap-6 lg:grid-cols-3">
             {doctors.map((doctor) => (
-              <article key={doctor.name} className="rounded-xl bg-white p-7 shadow-sm">
-                <div className="flex h-14 w-14 items-center justify-center rounded-lg bg-blue-900 text-lg font-bold text-white">
-                  {doctor.initials}
+              <article
+                key={doctor.name}
+                className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-lg shadow-slate-200/70"
+              >
+                <div className="relative min-h-72 bg-gradient-to-br from-blue-50 via-white to-slate-100">
+                  {doctor.image ? (
+                    <Image
+                      src={doctor.image}
+                      alt={doctor.imageAlt}
+                      fill
+                      sizes="(min-width: 1024px) 33vw, 100vw"
+                      className="object-contain object-bottom"
+                    />
+                  ) : (
+                    <div className="flex min-h-72 items-center justify-center">
+                      <div className="flex h-28 w-28 items-center justify-center rounded-2xl bg-blue-900 text-4xl font-bold text-white shadow-xl shadow-blue-200">
+                        {doctor.initials}
+                      </div>
+                    </div>
+                  )}
+                  <div className="absolute left-5 top-5 rounded-full bg-white/95 px-4 py-2 text-xs font-bold uppercase tracking-wide text-blue-800 shadow-sm">
+                    {doctor.stats[0]}
+                  </div>
                 </div>
-                <h3 className="mt-6 text-xl font-semibold">{doctor.role}</h3>
-                <p className="mt-2 text-sm font-semibold text-blue-800">
-                  Expert care by {doctor.name}
-                </p>
-                <p className="mt-4 text-sm leading-6 text-slate-600">
-                  {doctor.description}
-                </p>
-                <Link
-                  href="/book-appointment"
-                  className="mt-6 inline-block text-sm font-semibold text-blue-800"
-                >
-                  Book consultation
-                </Link>
+                <div className="p-6">
+                  <p className="text-sm font-semibold uppercase tracking-wide text-blue-800">
+                    {doctor.qualification}
+                  </p>
+                  <h3 className="mt-3 text-2xl font-bold">{doctor.name}</h3>
+                  <p className="mt-2 text-base font-semibold leading-7 text-slate-800">
+                    {doctor.role}
+                  </p>
+                  <p className="mt-4 text-sm leading-7 text-slate-600">
+                    {doctor.description}
+                  </p>
+
+                  <div className="mt-5 flex flex-wrap gap-2">
+                    {doctor.badges.map((badge) => (
+                      <span
+                        key={badge}
+                        className="rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-800"
+                      >
+                        {badge}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="mt-6 rounded-xl border border-slate-200 bg-[#f6f9fc] p-4">
+                    <p className="text-xs font-bold uppercase tracking-wide text-slate-500">
+                      Key expertise
+                    </p>
+                    <ul className="mt-3 space-y-2 text-sm leading-6 text-slate-700">
+                      {doctor.expertise.map((item) => (
+                        <li key={item} className="flex gap-2">
+                          <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-800" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="mt-5 grid grid-cols-2 gap-3">
+                    {doctor.stats.map((stat) => (
+                      <div
+                        key={stat}
+                        className="rounded-xl border border-blue-100 bg-white px-3 py-3 text-center text-sm font-bold text-blue-900"
+                      >
+                        {stat}
+                      </div>
+                    ))}
+                  </div>
+
+                  <Link
+                    href="/book-appointment"
+                    className="mt-6 block rounded-md bg-blue-800 px-5 py-3 text-center text-sm font-semibold text-white shadow-sm transition hover:bg-blue-950"
+                  >
+                    {doctor.cta}
+                  </Link>
+                </div>
               </article>
             ))}
           </div>
