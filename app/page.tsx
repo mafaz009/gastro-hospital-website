@@ -28,7 +28,7 @@ const doctors = [
   {
     name: "Dr. Juned Ahmad Khan",
     role: "Gastro Medicine, Liver, Pancreas and Endoscopy Specialist",
-    qualification: "MD, DM, FLBS-New Delhi",
+    qualification: "MD, DM, ILBS-New Delhi",
     description:
       "Expert in advanced gastroenterology, hepatology, pancreatic disorders and therapeutic endoscopic procedures.",
     image: "/images/best-gastro-doctor-lucknow-juned-khan.png",
@@ -43,15 +43,21 @@ const doctors = [
   {
     name: "Dr. A K Bansal",
     role: "GI, GI Oncology, HPB and Liver Transplant Surgeon",
-    qualification: "MCh Surgical Gastroenterology",
+    qualification: "MBBS, MS, MCh (SGPGI)",
     description:
       "Senior surgical specialist for complex gastrointestinal, hepatobiliary, liver, pancreatic and minimally invasive procedures.",
     image: "/images/dr-a-k-bansal-gastro-surgeon-lucknow-portrait.webp",
     imageAlt:
       "Dr. A K Bansal, gastro surgeon and HPB specialist in Lucknow",
-    badges: ["GI Surgery", "HPB Surgery", "Laparoscopic Surgery"],
+    badges: [
+      "GI Surgery",
+      "HPB Surgery",
+      "GI Cancer Surgery",
+      "Laparoscopic Surgery",
+      "GI Robotic Surgery",
+    ],
     expertise: ["Gallbladder, hernia and colorectal surgery", "GI oncology and cancer surgery", "Liver, pancreas and bile duct surgery"],
-    stats: ["15+ years", "5000+ surgeries"],
+    stats: ["Gastro Surgeon", "15+ years", "5000+ surgeries"],
     cta: "Book with Dr. A K Bansal",
     initials: "AB",
   },
