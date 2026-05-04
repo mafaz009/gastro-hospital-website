@@ -596,7 +596,7 @@ export default function Home() {
         <div className="relative mx-auto max-w-[1536px] px-4 pb-8 pt-10 md:px-8 lg:px-16 lg:pb-8 lg:pt-12">
           <div className="relative min-h-[574px] overflow-hidden lg:min-h-[542px]">
             <div className="relative z-20 max-w-[545px] pt-2 lg:pt-6">
-              <div className="inline-flex items-center gap-3 text-sm font-extrabold uppercase tracking-normal text-blue-800 md:text-base">
+              <div className="hidden items-center gap-3 text-sm font-extrabold uppercase tracking-normal text-blue-800 sm:inline-flex md:text-base">
                 <span className="grid h-9 w-9 place-items-center rounded-full bg-white/80 text-blue-800 shadow-sm ring-1 ring-blue-100">
                   <svg aria-hidden="true" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z" />
@@ -606,7 +606,7 @@ export default function Home() {
                 Lucknow&apos;s Best Gastro Hospital
               </div>
 
-              <h1 className="mt-5 text-5xl font-black leading-[1.08] tracking-normal text-blue-950 md:text-6xl xl:text-[60px]">
+              <h1 className="mt-5 text-[42px] font-black leading-[1.08] tracking-normal text-blue-950 sm:text-5xl md:text-6xl xl:text-[60px]">
                 Advanced Gastro Care.
                 <br />
                 Trusted Expertise.
@@ -621,7 +621,7 @@ export default function Home() {
               <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                 <Link
                   href="/book-appointment"
-                  className="inline-flex items-center justify-center gap-2.5 rounded-lg bg-blue-950 px-5 py-3 text-sm font-semibold text-white shadow-2xl shadow-blue-950/20 transition hover:bg-blue-900"
+                  className="inline-flex w-full items-center justify-center gap-2.5 rounded-lg bg-blue-950 px-5 py-3 text-sm font-semibold text-white shadow-2xl shadow-blue-950/20 transition hover:bg-blue-900 sm:w-auto"
                 >
                   <svg aria-hidden="true" className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M8 2v4" />
@@ -633,7 +633,7 @@ export default function Home() {
                 </Link>
                 <Link
                   href={hospital.phoneHref}
-                  className="inline-flex items-center justify-center gap-2.5 rounded-lg border border-blue-900 bg-white/80 px-5 py-3 text-sm font-semibold text-blue-950 shadow-sm backdrop-blur transition hover:bg-white"
+                  className="inline-flex w-full items-center justify-center gap-2.5 rounded-lg border border-blue-900 bg-white/80 px-5 py-3 text-sm font-semibold text-blue-950 shadow-sm backdrop-blur transition hover:bg-white sm:w-auto"
                 >
                   <svg aria-hidden="true" className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 3.1 5.18 2 2 0 0 1 5.11 3h3a2 2 0 0 1 2 1.72c.12.9.33 1.77.62 2.6a2 2 0 0 1-.45 2.11L9 10.71a16 16 0 0 0 4.29 4.29l1.27-1.27a2 2 0 0 1 2.11-.45c.83.29 1.7.5 2.6.62A2 2 0 0 1 22 16.92Z" />
@@ -645,7 +645,7 @@ export default function Home() {
 
           </div>
 
-          <div className="relative z-30 -mt-12 rounded-[1.6rem] bg-white/94 px-5 py-5 shadow-2xl shadow-blue-950/10 ring-1 ring-blue-100/80 backdrop-blur lg:-mt-14 lg:px-9">
+          <div className="relative z-30 mt-6 rounded-[1.6rem] bg-white/94 px-5 py-5 shadow-2xl shadow-blue-950/10 ring-1 ring-blue-100/80 backdrop-blur lg:-mt-14 lg:px-9">
             <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-5 lg:divide-x lg:divide-slate-200">
               {heroHighlights.map((item) => (
                 <div key={item.title} className="flex items-center gap-4 lg:px-5 first:lg:pl-0 last:lg:pr-0">
